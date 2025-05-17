@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>METALLUM INSTRUMENTOS - Início</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">METALLUM INSTRUMENTOS</a>
+            <ul class="nav-links">
+                <li><a href="products.html">Produtos</a></li>
+                <li><a href="contact.html">Contato</a></li>
+            </ul>
+            <div class="cart-icon">
+                <a href="cart.html">
+                    🛒 <span id="cart-count">0</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h2>Nossos Instrumentos</h2>
+            <p>Encontre os melhores instrumentos musicais com os melhores preços</p>
+        </section>
+
+        <section class="featured-products">
+            <h2>Destaques</h2>
+            <div class="product-grid-container" id="featured-products">
+                <a href="product-detail.html?id=violao-michael-vm68k" class="product-link">
+                    <div class="product-card">
+                        <img src="images/Violao_caio.jpg" alt="Violão Michael VM68K" class="product-image">
+                        <div class="product-info">
+                            <h3>Violão Michael VM68K</h3>
+                            <p class="product-description">Violão acústico com ótima sonoridade, ideal para iniciantes.</p>
+                            <span class="product-price">R$ 99,90</span>
+                            <button class="add-to-cart" data-product-id="violao-michael-vm68k">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="product-detail.html?id=baixo-do-mendigo" class="product-link">
+                    <div class="product-card">
+                        <img src="images/Baixo_caio.jpg" alt="Baixo Econômico" class="product-image">
+                        <div class="product-info">
+                            <h3>Baixo do Mendigo</h3>
+                            <p class="product-description">Baixo acessível com som surpreendente para o preço.</p>
+                            <span class="product-price">R$ 600,00</span>
+                            <button class="add-to-cart" data-product-id="baixo-do-mendigo">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="product-detail.html?id=guitarra-giannini-g101" class="product-link">
+                    <div class="product-card">
+                        <img src="images/Guitarra_caio.jpg" alt="Guitarra Giannini G101" class="product-image">
+                        <div class="product-info">
+                            <h3>Guitarra Giannini G101</h3>
+                            <p class="product-description">Guitarra elétrica versátil para diversos estilos musicais.</p>
+                            <span class="product-price">R$ 600,00</span>
+                            <button class="add-to-cart" data-product-id="guitarra-giannini-g101">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <h2>Conheça mais</h2>
+        <div id="videoConteiner">
+            <iframe
+                src="https://www.youtube.com/embed/y5QfmD884vw  " title="Conhecendo sobre a loja"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 METALLUM INSTRUMENTOS</p>
+        <p>Sempre te ajudando a tocar uma</p>
+        <div class="social-icons">
+            <a href="#"><img src="links/face.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/metallumofc?igsh=Nzd4bm92bHJkczZ6"><img src="links/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="links/linkedin.png" alt="LinkedIn"></a>
+            <a href="https://www.youtube.com/channel/YOUR_YOUTUBE_CHANNEL_ID"><img src="links/youtube.png" alt="YouTube"></a> </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>METALLUM INSTRUMENTOS - Carrinho</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">METALLUM INSTRUMENTOS</a>
+            <ul class="nav-links">
+                <li><a href="products.html">Produtos</a></li>
+                <li><a href="contact.html">Contato</a></li>
+            </ul>
+            <div class="cart-icon">
+                <a href="cart.html">
+                    🛒 <span id="cart-count">0</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="cart-section">
+            <div class="cart-items-container">
+                <h2>Seu Carrinho</h2>
+                </div>
+            
+            <div class="cart-summary">
+                <h3>Resumo do Pedido</h3>
+                <div class="summary-details">
+                    <p>Subtotal: R$ <span id="cart-subtotal">0,00</span></p>
+                    <p>Frete: R$ <span id="cart-shipping">0,00</span></p>
+                    <p>Total: <span id="cart-total">R$ 0,00</span></p>
+                </div>
+                <button class="checkout-btn">Finalizar Compra</button>
+            </div>
+        </section>
+
+        <div class="empty-cart" style="display: none;">
+            <p>Seu carrinho está vazio. Adicione alguns instrumentos!</p>
+            <a href="products.html" class="checkout-btn" style="width: auto; margin-top: 20px;">Ver Produtos</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 METALLUM INSTRUMENTOS</p>
+        <p>Sempre te ajudando a tocar uma</p>
+        <div class="social-icons">
+            <a href="#"><img src="links/face.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/metallumofc?igsh=Nzd4bm92bHJkczZ6"><img src="links/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="links/linkedin.png" alt="LinkedIn"></a>
+            <a href="https://www.youtube.com/channel/UCdLwVvXXaZlEb4OAXt_v1Tw"><img src="links/youtube.png" alt="YouTube"></a>
+        </div>
+    </footer>
+</body>
+</html>

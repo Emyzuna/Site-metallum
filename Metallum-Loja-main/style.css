@@ -1,0 +1,1033 @@
+/* style.css */
+
+/* Estilo Metaleiro - Rock'n'Roll - CORES ATUALIZADAS */
+:root {
+    --preto: #1a1a1a;
+    --preto-fundo-transparente: rgba(0, 0, 0, 0.85); /* Usado para o container */
+    --vermelho: #9e2b2b;
+    --vermelho-escuro: #7a1c1c;
+    --dourado: #c0a062;
+    --cinza: #3d3d3d;
+    --cinza-claro: #e0e0e0;
+    --borda: #444; /* Mantido para alguns detalhes */
+}
+
+body {
+    font-family: 'Metal Mania', cursive, 'Arial Black', sans-serif;
+    background-color: var(--preto);
+    color: white;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://images.unsplash.com/photo-1511671782779-c97d3d27a5d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--preto-fundo-transparente);
+    padding: 20px;
+    border: 3px solid var(--dourado);
+    box-shadow: 0 0 20px rgba(158, 43, 43, 0.5);
+}
+
+/* Header Estilo Metal */
+header {
+    background-color: var(--preto);
+    padding: 1rem 0;
+    border-bottom: 3px solid var(--vermelho);
+    position: relative;
+    z-index: 10;
+}
+
+header::before {
+    content: "🤘";
+    position: absolute;
+    font-size: 2rem;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--dourado);
+}
+
+header::after {
+    content: "🤘";
+    position: absolute;
+    font-size: 2rem;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--dourado);
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar .logo {
+    font-family: 'Metal Mania', cursive, 'Arial Black', sans-serif; /* Aplicando a fonte aqui */
+    font-size: 2.5rem;
+    color: var(--dourado);
+    text-shadow: 3px 3px 0 var(--vermelho);
+    letter-spacing: 3px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    border: 2px solid var(--vermelho);
+    border-radius: 5px;
+    transition: all 0.3s;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-family: 'Metal Mania', cursive, 'Arial Black', sans-serif; /* Aplicando a fonte aqui */
+}
+
+.nav-links a:hover, .nav-links a.active {
+    background-color: var(--vermelho);
+    color: var(--dourado);
+    transform: scale(1.1);
+}
+
+.cart-icon {
+    position: relative;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.cart-icon a {
+    display: flex;
+    align-items: center;
+    color: var(--dourado);
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+}
+
+.cart-icon img { /* Se você quiser um ícone de imagem separado do emoji */
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+}
+
+#cart-count {
+    background-color: var(--vermelho);
+    color: var(--dourado);
+    border-radius: 50%;
+    min-width: 25px; /* Usar min-width para números maiores */
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    margin-left: 5px; /* Espaço entre o carrinho e o número */
+    padding: 0 5px; /* Padding para números maiores */
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 3rem 0;
+    margin-bottom: 2rem;
+    border: 3px solid var(--vermelho);
+    background-color: rgba(0, 0, 0, 0.7);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.hero h2 {
+    font-family: 'Metal Mania', cursive, 'Arial Black', sans-serif; /* Aplicando a fonte aqui */
+    font-size: 3rem;
+    color: var(--dourado);
+    text-shadow: 2px 2px 0 var(--vermelho);
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* Produtos em Grid (geral) */
+.product-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    padding: 0 20px;
+}
+
+.product-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.product-card {
+    background: linear-gradient(to bottom, var(--preto), #333);
+    border-radius: 5px;
+    overflow: hidden;
+    border: 2px solid var(--vermelho);
+    transition: all 0.3s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(158, 43, 43, 0.5);
+    border-color: var(--dourado);
+}
+
+.product-card::before {
+    content: "🎸";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    opacity: 0.3;
+    color: var(--dourado);
+}
+
+.product-card .product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid var(--vermelho);
+}
+
+.product-info {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-info h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.4rem;
+    color: var(--dourado);
+}
+
+.product-price {
+    font-weight: bold;
+    color: var(--vermelho);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    white-space: nowrap;
+}
+
+.product-info p {
+    color: #ccc;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.add-to-cart {
+    background-color: var(--vermelho);
+    color: var(--dourado);
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+    font-family: 'Metal Mania', cursive, 'Arial Black', sans-serif; /* Aplicando a fonte aqui */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: auto;
+}
+
+.add-to-cart:hover {
+    background-color: var(--vermelho-escuro);
+    letter-spacing: 2px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--preto);
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+    border-top: 3px solid var(--vermelho);
+    font-size: 1.1rem;
+    color: var(--dourado);
+}
+
+footer p {
+    margin: 0;
+    color: var(--dourado);
+}
+
+/* Ícones Sociais no Rodapé */
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+footer .social-icons img {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+footer .social-icons img:hover {
+    transform: scale(1.1);
+}
+
+footer p:not(.social-icons p) {
+    font-size: clamp(1.1rem, 1.5vw, 1.5rem);
+}
+
+/* Notificação */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--vermelho);
+    color: var(--dourado);
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(192, 160, 98, 0.5);
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    font-size: 1.2rem;
+    border: 2px solid var(--dourado);
+    font-weight: bold;
+    font-family: 'Metal Mania', cursive, 'Arial Black', sans-serif; /* Aplicando a fonte aqui */
+}
+
+.notification.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.notification::after {
+    content: "🤘";
+    margin-left: 10px;
+}
+
+/* Filtros (Products Page) */
+.filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Para responsividade */
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.filter-btn {
+    padding: 0.7rem 1.5rem;
+    background-color: var(--cinza);
+    border: 2px solid var(--vermelho);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: white;
+    font-family: 'Metal Mania', cursive, 'Arial Black', sans-serif; /* Aplicando a fonte aqui */
+    font-size: 1.1rem;
+    text-transform: uppercase; /* Estilo rock */
+}
+
+.filter-btn:hover {
+    background-color: var(--vermelho);
+    color: var(--dourado);
+}
+
+.filter-btn.active {
+    background-color: var(--vermelho);
+    color: var(--dourado);
+    transform: scale(1.1);
+    box-shadow: 0 0 10px var(--dourado);
+}
+
+/* Carrinho Estilo Rock */
+.cart-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Itens e resumo */
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.cart-items-container {
+    background-color: rgba(30, 30, 30, 0.7);
+    padding: 1.5rem;
+    border-radius: 5px;
+    border: 2px solid var(--vermelho);
+}
+
+.cart-items-container h2 {
+    color: var(--dourado);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.cart-item {
+    display: flex; /* Usar flexbox para alinhamento */
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--cinza); /* Linha sutil entre itens */
+}
+
+.cart-item:last-child {
+    border-bottom: none; /* Remove a linha do último item */
+}
+
+.cart-item-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 2px solid var(--vermelho);
+    flex-shrink: 0; /* Evita que a imagem encolha */
+}
+
+.cart-item-details {
+    flex-grow: 1; /* Ocupa o espaço restante */
+}
+
+.cart-item-details h3 {
+    color: var(--dourado);
+    margin: 0 0 0.5rem 0;
+    font-size: 1.3rem;
+}
+
+.cart-item-details p { /* Preço do item */
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: white;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.quantity-controls button {
+    width: 30px;
+    height: 30px;
+    border: 2px solid var(--vermelho);
+    background: var(--preto);
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.quantity-controls button:hover {
+    background-color: var(--vermelho);
+    color: var(--dourado);
+}
+
+.quantity-controls span {
+    font-size: 1.1rem;
+    color: var(--dourado);
+}
+
+.remove-item {
+    background: none;
+    border: none;
+    color: var(--vermelho);
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: underline;
+    transition: all 0.3s;
+    font-size: 0.95rem; /* Um pouco menor */
+}
+
+.remove-item:hover {
+    color: var(--dourado);
+}
+
+.cart-summary {
+    background-color: rgba(30, 30, 30, 0.9);
+    padding: 1.5rem;
+    border-radius: 5px;
+    border: 2px solid var(--vermelho);
+    height: fit-content; /* Se ajusta ao conteúdo */
+}
+
+.cart-summary h3 {
+    color: var(--dourado);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.summary-details p {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    color: white;
+    display: flex;
+    justify-content: space-between; /* Alinha texto e valor */
+}
+
+#cart-total {
+    color: var(--dourado);
+    font-size: 1.5rem;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--vermelho);
+    color: var(--dourado);
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Metal Mania', cursive, 'Arial Black', sans-serif; /* Aplicando a fonte aqui */
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.checkout-btn:hover {
+    background-color: var(--vermelho-escuro);
+    letter-spacing: 2px;
+    box-shadow: 0 0 15px var(--dourado);
+}
+
+.empty-cart {
+    text-align: center;
+    padding: 3rem;
+    color: #ccc;
+    font-size: 1.3rem;
+    grid-column: 1 / -1; /* Ocupa todas as colunas no grid */
+    background-color: rgba(30, 30, 30, 0.7);
+    border-radius: 5px;
+    border: 2px solid var(--dourado);
+    margin-top: 2rem;
+}
+
+/* Contato Estilo Rock */
+.contact-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.contact-form {
+    background-color: rgba(30, 30, 30, 0.7);
+    padding: 2rem;
+    border-radius: 5px;
+    border: 2px solid var(--vermelho);
+}
+
+.contact-form h2 {
+    color: var(--dourado);
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--dourado);
+    font-size: 1.2rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: rgba(30, 30, 30, 0.7);
+    border: 2px solid var(--cinza-claro);
+    border-radius: 5px;
+    color: white;
+    font-family: 'Arial', sans-serif; /* Mantenho Arial para inputs/textareas para digitação clara */
+    box-sizing: border-box; /* Inclui padding e borda na largura */
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical; /* Permite redimensionar verticalmente */
+}
+
+.submit-btn {
+    background-color: var(--vermelho);
+    color: var(--dourado);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+    font-family: 'Metal Mania', cursive, 'Arial Black', sans-serif; /* Aplicando a fonte aqui */
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: var(--vermelho-escuro);
+    letter-spacing: 2px;
+}
+
+.contact-info {
+    background-color: rgba(30, 30, 30, 0.7);
+    padding: 2rem;
+    border-radius: 5px;
+    border: 2px solid var(--vermelho);
+    display: flex; /* Para centralizar conteúdo */
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Alinha o texto à esquerda */
+}
+
+.contact-info h3 {
+    color: var(--dourado);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center; /* Centraliza o título */
+    width: 100%; /* Para que o text-align funcione */
+}
+
+.contact-info p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.contact-info strong {
+    color: var(--dourado);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .cart-section, .contact-section {
+        grid-template-columns: 1fr; /* Empilha as colunas */
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 15px; /* Espaço inferior para mobile */
+    }
+
+    .navbar .logo {
+        margin-bottom: 15px;
+        font-size: 1.8rem;
+    }
+
+    .nav-links {
+        flex-wrap: wrap; /* Permite que os links quebrem a linha */
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+    .nav-links li {
+        margin: 5px 10px; /* Menos margem em mobile */
+    }
+
+    .cart-icon {
+        margin-left: 0; /* Remove margem lateral */
+        margin-top: 10px; /* Espaço do carrinho */
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .product-grid-container {
+        grid-template-columns: 1fr; /* Apenas uma coluna em mobile */
+        padding: 0 10px; /* Menos padding */
+    }
+
+    .cart-item {
+        flex-direction: column; /* Itens do carrinho empilhados */
+        align-items: center;
+        text-align: center;
+    }
+
+    .cart-item-details {
+        width: 100%;
+        text-align: center;
+    }
+
+    .quantity-controls {
+        justify-content: center; /* Centraliza controles de quantidade */
+    }
+
+    /* Detalhes do Produto em telas menores */
+    .product-page-layout { /* Nova classe do HTML */
+        grid-template-columns: 1fr; /* Uma única coluna em telas menores */
+    }
+
+    .product-detail-section {
+        grid-template-columns: 1fr; /* Imagem e info empilhadas */
+    }
+
+    .add-to-cart-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .add-to-cart-section label,
+    .add-to-cart-section input[type="number"] {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+/* Styles para o Vídeo Incorporado */
+#videoConteiner {
+    position: relative;
+    width: clamp(20rem, 75vw, 62rem);
+    height: 0;
+    padding-bottom: clamp(10rem, 43vh, 60rem);
+    margin: auto;
+    overflow: hidden;
+    border: 2px solid var(--dourado);
+    box-shadow: 0 0 15px rgba(192, 160, 98, 0.5);
+    margin-top: 3rem;
+}
+
+#videoConteiner > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* --- Estilos para a Página de Detalhes do Produto --- */
+/* Estes estilos foram atualizados para usar a nova estrutura HTML */
+
+.product-page-layout { /* Classe adicionada ao HTML */
+    display: grid;
+    grid-template-columns: 2.5fr 1fr; /* Coluna principal maior que a lateral */
+    gap: 20px;
+    align-items: start;
+    margin-bottom: 30px;
+}
+
+.product-main-content { /* Contém a imagem e as informações do produto principal */
+    background-color: var(--preto); /* Usando a cor definida nas variáveis */
+    border-radius: 8px;
+    padding: 20px;
+    border: 3px solid var(--dourado); /* Borda mais robusta */
+    box-shadow: 0 0 15px rgba(158, 43, 43, 0.5); /* Sombra mais vibrante */
+}
+
+.product-detail-section { /* O grid interno da imagem e informações */
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* Imagem 1 parte, Info 1.5 partes */
+    gap: 30px;
+    align-items: start;
+    color: var(--cinza-claro);
+}
+
+.product-image-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-image-column .main-image {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px; /* Limite a altura da imagem principal */
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    border: 2px solid var(--dourado); /* Borda na imagem */
+}
+
+/* Os estilos .thumbnails e .thumbnail estão agora dentro de .product-image-column se você for usá-los */
+.product-image-column .thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.product-image-column .thumbnails .thumbnail {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.product-image-column .thumbnails .thumbnail:hover,
+.product-image-column .thumbnails .thumbnail.active {
+    border-color: var(--vermelho);
+}
+
+
+.product-info-column h1 {
+    color: var(--dourado);
+    margin-top: 0;
+    font-size: 2.2em;
+    text-shadow: 1px 1px 0 var(--vermelho);
+}
+
+.product-info-column .product-price {
+    font-size: 1.8em;
+    color: var(--vermelho);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.product-info-column .product-description {
+    line-height: 1.7;
+    margin-bottom: 25px;
+    font-size: 1.1em;
+    color: var(--cinza-claro);
+}
+
+.product-info-column .additional-info h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: var(--dourado);
+    font-size: 1.3em;
+    border-bottom: 1px solid var(--borda);
+    padding-bottom: 5px;
+}
+
+.product-info-column .additional-info ul {
+    list-style: none; /* Remove bolinhas padrão */
+    padding: 0;
+    margin: 0;
+}
+
+.product-info-column .additional-info ul li {
+    margin-bottom: 8px;
+    color: var(--cinza-claro);
+    font-size: 1em;
+}
+
+.product-info-column .additional-info ul li strong {
+    font-weight: bold;
+    color: var(--dourado); /* Para destacar o título da especificação */
+}
+
+.add-to-cart-section {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    background-color: var(--cinza); /* Cor do tema */
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid var(--vermelho); /* Borda do tema */
+}
+
+.add-to-cart-section label {
+    margin-right: 15px;
+    font-size: 1.1em;
+    color: var(--dourado);
+}
+
+.add-to-cart-section .quantity-input {
+    width: 70px;
+    padding: 10px;
+    border: 1px solid var(--dourado); /* Borda do tema */
+    border-radius: 4px;
+    margin-right: 20px;
+    background-color: var(--preto); /* Cor do tema */
+    color: var(--cinza-claro);
+    text-align: center;
+    font-size: 1em;
+}
+
+.add-to-cart-section .add-to-cart {
+    padding: 12px 25px;
+    background-color: var(--vermelho);
+    color: var(--dourado);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: 'Metal Mania', cursive, 'Arial Black', sans-serif; /* Aplicando a fonte aqui */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.add-to-cart-section .add-to-cart:hover {
+    background-color: var(--vermelho-escuro);
+    transform: translateY(-2px);
+    letter-spacing: 2px;
+}
+
+.shipping-payment-info { /* Nova seção de informações de entrega e pagamento */
+    margin-top: 30px;
+    background-color: var(--cinza);
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid var(--vermelho);
+}
+
+.shipping-payment-info h3 {
+    color: var(--dourado);
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--borda);
+    padding-bottom: 5px;
+}
+
+.shipping-payment-info p {
+    margin-bottom: 5px;
+    color: var(--cinza-claro);
+}
+
+.shipping-payment-info input[type="text"] {
+    padding: 5px;
+    border: 1px solid var(--dourado);
+    border-radius: 3px;
+    background-color: var(--preto);
+    color: var(--cinza-claro);
+    margin-left: 5px;
+}
+
+
+/* --- Estilos para Produtos Relacionados (na barra lateral) --- */
+.related-products-aside { /* Nova classe no HTML para a barra lateral */
+    background-color: var(--preto);
+    border-radius: 8px;
+    padding: 20px;
+    color: var(--cinza-claro);
+    text-align: center;
+    border: 3px solid var(--vermelho);
+    box-shadow: 0 0 15px rgba(158, 43, 43, 0.5);
+}
+
+.related-products-aside h2 {
+    color: var(--dourado);
+    margin-bottom: 25px;
+    font-size: 1.8em;
+    text-shadow: 1px 1px 0 var(--vermelho);
+}
+
+.related-products-aside #related-products-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Produtos em lista vertical na barra lateral */
+    gap: 15px;
+}
+
+.related-products-aside .product-card {
+    background-color: #222;
+    border-radius: 8px;
+    padding: 10px; /* Menor padding para cards na barra lateral */
+    text-align: center;
+    border: 1px solid var(--cinza);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.related-products-aside .product-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.related-products-aside .product-card img {
+    max-width: 100%;
+    height: 100px; /* Altura fixa para imagens na barra lateral */
+    object-fit: contain;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    border: 1px solid var(--dourado);
+}
+
+.related-products-aside .product-card h3 {
+    font-size: 0.9em;
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.related-products-aside .product-card .product-price {
+    color: var(--vermelho);
+    font-weight: bold;
+    font-size: 1em;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.related-products-aside .product-card .add-to-cart {
+    background-color: var(--dourado);
+    color: var(--preto);
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    font-size: 0.8em;
+    font-family: 'Metal Mania', cursive, 'Arial Black', sans-serif; /* Aplicando a fonte aqui */
+    text-transform: uppercase;
+}
+
+.related-products-aside .product-card .add-to-cart:hover {
+    background-color: #ffbf00;
+}
